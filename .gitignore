@@ -1,0 +1,13 @@
+_ReSharper*
+
+*.ReSharper.user
+
+*.user
+*.suo
+*.zip
+*.dgml
+
+**/.git
+**/bin
+**/obj
+**/*.nupkg
