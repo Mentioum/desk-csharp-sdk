@@ -1,4 +1,7 @@
-﻿using Desk.Request;
+﻿using System;
+using Desk.Entities;
+using Desk.Request;
+using Desk.Response;
 using RestSharp;
 
 namespace Desk
@@ -14,14 +17,14 @@ namespace Desk
         public IDeskApi Api { get; set; }
 
 
-        public IRestResponse GetTopics()
+        public IRestResponse GetTopics(GetTopicsParameters parameters)
         {
-            return GetTopics(new GetTopicsParameters());
+            return Api.Get("topics.json" + parameters);
         }
 
-        public IRestResponse GetTopics(GetTopicsParameters parametersBase)
+        public GetTopicsResponse GetTopicsMapped(GetTopicsParameters parameters)
         {
-            return Api.Get("topics.json" + parametersBase);
+            return new GetTopicsResponse(GetTopics(parameters));
         }
 
         public IRestResponse VerifyConnection()

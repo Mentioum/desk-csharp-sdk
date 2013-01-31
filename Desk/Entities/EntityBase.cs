@@ -25,6 +25,9 @@
 
         public T GetDynamicProperty<T>(string propertyName)
         {
+            if (DynamicProperties == null)
+                return default(T);
+
             var value = DynamicProperties[propertyName];
 
             return value == null ? default(T) : (T) value;

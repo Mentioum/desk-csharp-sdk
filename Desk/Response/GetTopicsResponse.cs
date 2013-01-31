@@ -38,6 +38,9 @@ namespace Desk.Response
         {
             dynamic result = JsonConvert.DeserializeObject(rawResponse.Content);
 
+            if (result == null)
+                return;
+
             Count = result["count"];
             Page = result["page"];
             Total = result["total"];

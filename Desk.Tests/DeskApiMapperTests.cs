@@ -1,4 +1,5 @@
 ﻿using Desk.Request;
+using Desk.Response;
 using NSubstitute;
 using NUnit.Framework;
 using RestSharp;
@@ -26,7 +27,7 @@ namespace Desk.Tests
 
 
         [Test]
-        public void GetTopics_ShouldAccessCorrectResouceWithoutParameters()
+        public void GetTopics_ShouldAccessCorrectResourceWithoutParameters()
         {
             mapper.GetTopics(GetTopicsParameters.None);
 
@@ -36,7 +37,7 @@ namespace Desk.Tests
         [Test]
         [TestCase(10, 20)]
         [TestCase(20, 30)]
-        public void GetTopics_ShouldAccessCorrectResouceWithParameters(int count, int page)
+        public void GetTopics_ShouldAccessCorrectResourceWithParameters(int count, int page)
         {
             mapper.GetTopics(new GetTopicsParameters { Count = count, Page = page });
 
@@ -44,7 +45,7 @@ namespace Desk.Tests
         }
 
         [Test]
-        public void GetTopics_ShouldReturnRawResponce()
+        public void GetTopics_ShouldReturnRawResponse()
         {
             var result = mapper.GetTopics(GetTopicsParameters.None);
 
@@ -52,7 +53,33 @@ namespace Desk.Tests
         }
 
         [Test]
-        public void VerifyConnection_ShouldAccessCorrectResouce()
+        public void GetTopicsMapped_ShouldAccessCorrectResourceWithoutParameters()
+        {
+            mapper.GetTopicsMapped(GetTopicsParameters.None);
+
+            connection.Received().Get("topics.json");
+        }
+
+        [Test]
+        [TestCase(10, 20)]
+        [TestCase(20, 30)]
+        public void GetTopicsMapped_ShouldAccessCorrectResourceWithParameters(int count, int page)
+        {
+            mapper.GetTopicsMapped(new GetTopicsParameters { Count = count, Page = page });
+
+            connection.Received().Get("topics.json?count=" + count + "&page=" + page);
+        }
+
+        [Test]
+        public void GetTopics_ShouldReturnMappedResponse()
+        {
+            var result = mapper.GetTopicsMapped(GetTopicsParameters.None);
+
+            Assert.That(result, Is.TypeOf(typeof(GetTopicsResponse)));
+        }
+
+        [Test]
+        public void VerifyConnection_ShouldAccessCorrectResource()
         {
             mapper.VerifyConnection();
 
@@ -60,7 +87,7 @@ namespace Desk.Tests
         }
 
         [Test]
-        public void VerifyConnection_ShouldReturnRawResponce()
+        public void VerifyConnection_ShouldReturnRawResponse()
         {
             var result = mapper.VerifyConnection();
 
