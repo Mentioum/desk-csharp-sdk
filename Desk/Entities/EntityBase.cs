@@ -27,7 +27,7 @@
         {
             var value = DynamicProperties[propertyName];
 
-            return (T)value;
+            return value == null ? default(T) : (T) value;
         }
     }
 }

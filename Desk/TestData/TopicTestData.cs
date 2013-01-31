@@ -10,7 +10,21 @@
     /// </remarks>
     public static class TopicTestData
     {
-        public static string Json
+        public static string GetTopicJson
+        {
+            get
+            {
+                return @"
+{
+    'id':1,
+    'name':'Sample :: General',
+    'description':'Sample Topic Description :: Information about our company',
+    'show_in_portal':true
+}".Replace("'", "\"");
+            }
+        }
+
+        public static string GetTopicsJson
         {
             get
             {

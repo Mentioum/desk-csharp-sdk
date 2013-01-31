@@ -9,9 +9,17 @@ namespace Desk.Tests.Entities
     public class TopicTests
     {
         [Test]
-        public void Topic_ShouldParseGetTopicsData()
+        public void Topic_ShouldParseGetTopicJsonData()
         {
-            var topic = new Topic(JsonConvert.DeserializeObject(TopicTestData.Json));
+            var topic = new Topic(JsonConvert.DeserializeObject(TopicTestData.GetTopicJson));
+
+            AssertTopic(topic, 1, "Sample :: General", "Sample Topic Description :: Information about our company", true, 0);
+        }
+
+        [Test]
+        public void Topic_ShouldParseGetTopicsJsonData()
+        {
+            var topic = new Topic(JsonConvert.DeserializeObject(TopicTestData.GetTopicsJson));
 
             AssertTopic(topic, 1, "Sample :: General", "Sample Topic Description :: Information about our company", true, 1);
         }
