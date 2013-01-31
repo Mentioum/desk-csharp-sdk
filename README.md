@@ -71,6 +71,7 @@ Mapped API resources
 --------------------
 
 Content resources
+
 	topics 
 
 
@@ -79,11 +80,13 @@ Unmapped API resources (todo)
 -----------------------------
 
 Case resources
+
 	cases 
 	cases/show 
 	case/update 
 
 Customer resources
+
 	customers 
 	customers/show 
 	customers/create 
@@ -94,16 +97,19 @@ Customer resources
 	customers/phones/update 
 
 Interaction resources
+
 	interactions 
 	interaction/create 
 
 User resources
+
 	groups 
 	groups/show 
 	users 
 	users/show 
 
 Content resources
+
 	topics/show 
 	topics/create 
 	topics/update 
@@ -115,6 +121,7 @@ Content resources
 	articles/destroy 
 
 Macro resources
+
 	macros 
 	macros/create 
 	macros/show 
