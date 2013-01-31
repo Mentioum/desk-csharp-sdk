@@ -10,6 +10,12 @@
     /// </remarks>
     public class GetTopicsParameters : ParametersBase
     {
+        public static GetTopicsParameters None
+        {
+            get { return new GetTopicsParameters(); }
+        }
+
+
         public int Count
         {
             get { return GetParameter<int>("count"); }

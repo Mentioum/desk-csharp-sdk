@@ -17,7 +17,7 @@ namespace Desk.Tests
         public void Setup()
         {
             response = Substitute.For<IRestResponse>();
-
+            
             connection = Substitute.For<IDeskApi>();
             connection.Get(Arg.Any<string>()).Returns(response);
 
@@ -28,7 +28,7 @@ namespace Desk.Tests
         [Test]
         public void GetTopics_ShouldAccessCorrectResouceWithoutParameters()
         {
-            mapper.GetTopics(new GetTopicsParameters());
+            mapper.GetTopics(GetTopicsParameters.None);
 
             connection.Received().Get("topics.json");
         }
@@ -46,7 +46,7 @@ namespace Desk.Tests
         [Test]
         public void GetTopics_ShouldReturnRawResponce()
         {
-            var result = mapper.VerifyConnection();
+            var result = mapper.GetTopics(GetTopicsParameters.None);
 
             Assert.That(result, Is.EqualTo(response));
         }

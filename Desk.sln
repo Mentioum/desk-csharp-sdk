@@ -7,6 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desk.Tests", "Desk.Tests\De
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{5882060C-FA17-4A3B-9FFC-22DEF424D66F}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		build.bat = build.bat
+		build.boo = build.boo
 		README.md = README.md
 	EndProjectSection
 EndProject

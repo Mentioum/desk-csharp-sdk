@@ -67,6 +67,64 @@ The DeskApiMapper is really convenient, but until all API methods are
 mapped, you will need the DeskApi class as well.
 
 
+Mapped API resources
+--------------------
+
+Content resources
+	topics 
+
+
+
+Unmapped API resources (todo)
+-----------------------------
+
+Case resources
+	cases 
+	cases/show 
+	case/update 
+
+Customer resources
+	customers 
+	customers/show 
+	customers/create 
+	customers/update 
+	customers/emails/create 
+	customers/emails/update 
+	customers/phones/create 
+	customers/phones/update 
+
+Interaction resources
+	interactions 
+	interaction/create 
+
+User resources
+	groups 
+	groups/show 
+	users 
+	users/show 
+
+Content resources
+	topics/show 
+	topics/create 
+	topics/update 
+	topics/destroy 
+	topics/articles 
+	topics/articles/create 
+	articles/show 
+	articles/update 
+	articles/destroy 
+
+Macro resources
+	macros 
+	macros/create 
+	macros/show 
+	macros/update 
+	macros/destroy 
+	macros/actions 
+	macros/actions/show 
+	macros/actions/update 
+
+
 License
 -------
 

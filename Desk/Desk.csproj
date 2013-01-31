@@ -47,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
     <Compile Include="Entities\Topic.cs" />
     <Compile Include="Entities\EntityBase.cs" />
     <Compile Include="DeskApi.cs" />
