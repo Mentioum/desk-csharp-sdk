@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>desk.com C# SDK</title>
+
+	<meta charset="utf-8">
+	<meta name="author" content="Daniel Saidi - daniel.saidi@gmail.com" />
+	<meta name="keywords" content="desk.com, desk, C#, api, sdk" />
+	<meta name="description" content="The Desk.com C# SDK helps you connect to and work with the desk.com API" />
+	
+	<!--[if lt IE 9]>
+	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<link rel="stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="static/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="static/css/site.css" />
+	<link rel="stylesheet" type="text/css" href="static/css/animate.css" />
+
+	<link href="http://fonts.googleapis.com/css?family=Lekton" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Molengo" rel="stylesheet" type="text/css">
+	
+	<link rel="shortcut icon" href="static/img/favicon.ico">
+  
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-2575180-16']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+</head>
+
+
+<body data-spy="scroll" data-target=".navbar">
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<ul class="nav pull-right">
+					<li><a href="mailto:daniel.saidi@gmail.com"><i class="icon-envelope"></i> Contact me</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="hero-unit">
+		<div class="container">
+			<h1>Desk C# SDK</h1>
+			<p>Connect to and work with the <a href="http://www.desk.com" rel="external">desk.com</a> API</p>
+			<div class="buttons">
+				<a href="http://github.com/danielsaidi/desk-csharp-sdk/tags" rel="external">
+					<button class="btn btn-warning download animated bounceIn">
+						<i class="icon icon-cloud-download"></i>Download the SDK
+					</button>
+				</a>
+				<a href="http://github.com/danielsaidi/desk-csharp-sdk" rel="external">
+					<button class="btn btn-info github">
+						<i class="icon-wrench"></i>View GitHub project
+					</button>
+				</a>
+				<!--<a href="http://nuget.org/packages?q=nextra" rel="external">
+					<button class="btn btn-default nuget">
+						...or grab it from NuGet
+					</button>
+				</a>-->
+			</div>
+
+			<div class="version-info">
+				Current version <span class="version-target"></span> • Created and & maintained by Daniel Saidi
+			</div>
+		</div>
+	</div>
+
+
+	<div class="social well">
+		<div class="container">
+			<a class="btn btn-mini" href="http://github.com/danielsaidi/desk-csharp-sdk" rel="external"><i class="icon-github icon-large"></i> Watch</a>
+			
+			<a class="btn btn-mini" href="http://github.com/danielsaidi/desk-csharp-sdk" rel="external"><i class="icon-github icon-large"></i> Fork</a>
+
+			<a class="btn btn-mini" href="http://twitter.com/danielsaidi/" target="_blank"><i class="icon-twitter icon-large"></i> Follow @danielsaidi</a>
+		</div>
+	</div>
+
+
+	<div class="container">
+
+		<section id="features">
+			<div class="row">
+				<span class="span4">
+					<h3><i class="icon-comment-alt"></i>Untyped layer</h3>
+					<p>Connects to the desk.com API. The most flexible approach, but requires a bit of manual work to setup api calls and parse the result.</p>
+				</span>
+				<span class="span4">
+					<h3><i class="icon-comment"></i>Strongly typed layer</h3>
+					<p>Connects to the desk.com API, using the untyped layer. Contains mappers and classes that automate all API calls and result parsing.</p>
+				</span>
+				<span class="span4">
+					<h3><i class="icon-check"></i>Tested</h3>
+					<p>All parts of the desk.com C# SDK are tested, to assure that all mappers and parsers work as they should.</p>
+				</span>
+			</div>
+		</section>
+
+		<section id="get-started">
+			<h2>Get started</h2>
+			<p>
+				<div class="row">
+					<span class="span2">
+						To get started, either
+					</span>
+					<span class="span10">
+						<ul>
+							<li>grab the <a href="http://github.com/danielsaidi/desk-csharp-sdk" rel="external">source code</a> from GitHub</li>
+							<li>download a certain version from the <a href="http://github.com/danielsaidi/desk-csharp-sdk/tags" rel="external">download page</a></li>
+							<li>grab the libraries you need directly from within Visual Studio, using <a href="http://nuget.org/packages/desk">NuGet</a></li>
+						</ul>
+					</span>
+				</div>
+			</p>
+			<p>
+				Once you have the references in place, just follow the instructions in the readme file.
+			</p>
+		</section>
+
+		<section id="contribute">
+			<h2>Contribute</h2>
+			<p>
+				Contributions to the SDK are more than welcome. Just send me a pull request, attach the code in an e-mail or whatever. I'd love to have a look at it.
+			</p>
+		</section>
+
+		<section id="license">
+			<h2>License</h2>
+			<p>
+				The desk.com C# SDK is released under the <a href="http://www.opensource.org/licenses/mit-license.php" rel="external" title="Read more about the MIT license">MIT license</a>, which means that you can do much about anything you want with it. If you like it, please spread the word.
+			</p>
+		</section>
+	</div>
+
+
+	<footer>
+		<div class="container">
+		<h3>Contact</h3>
+			<p><i class="icon-home"></i> Site: <a href="http://saidi.se">saidi.se</a></p>
+			<p><i class="icon-envelope-alt"></i> Email: <a href="mailto:daniel.saidi@gmail.com">daniel.saidi@gmail.com</a></p>
+			<p><i class="icon-twitter"></i> Twitter: <a href="http://twitter.com/danielsaidi/">@danielsaidi</a></p>
+			<p><i class="icon-pencil"></i> Blog: <a href="http://danielsaidi.wordpress.com">danielsaidi.wordpress.com</a></p>
+			<p><i class="icon-wrench"></i> Work: System Developer @ <a href="http://cloudnine.se">Cloud Nine</a></p>
+		</div>
+	</footer>
+
+
+	<script type="text/javascript" src="static/js/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="static/js/jquery.json-2.4.min.js"></script>
+	<script type="text/javascript" src="static/js/site.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+
+body { }
+
+a { text-decoration:underline; }
+footer a:hover { color: #fff; }
+
+h1, h2, h3, h1 + p { font-family: 'Molengo', Georgia, Times, serif; }
+
+h2 { border-bottom: 1px solid #EEE; }
+h3 { font-weight: normal; }
+h3 i { margin-right: 0.8em; }
+
+section { padding-top: 40px; }
+section h2 { margin-bottom: 1em; }
+section h2 i { margin-right: 1em; }
+
+footer {
+   background: url(../img/bg-purple.png) #4a699d;
+   color: white;
+   margin-top: 5em;
+   padding: 2em 0 5em 0;
+   text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 1px;
+}
+
+footer a { color: #fff; }
+footer i { margin-right: 1em; }
+
+
+.navbar .nav {
+   margin-left: 1em;
+}
+
+.navbar .active {
+   color: red !important;
+}
+
+
+.hero-unit {
+   background: url(../img/bg-purple.png) #660bab;
+   border-radius:0px; -moz-border-radius:0px; -webkit-border-radius:0px;
+   color: white;
+   margin-bottom: 0px;
+   padding-top: 40px;
+   text-align: center;
+   text-shadow: rgba(0, 0, 0, 0.8) 1px 2px 2px;
+}
+
+.hero-unit a {
+   color: white;
+   text-decoration: underline;
+}
+
+.hero-unit h1 {
+   font-size: 6em;
+   font-weight: normal;
+}
+
+.hero-unit p {
+   font-size: 2em;
+   margin-top: 20px;
+}
+
+.hero-unit p + p {
+   font-size: 1.1em;
+   margin-top: 40px;
+}
+
+.hero-unit .container {
+   padding: 80px 0 40px 0;
+   background: url(../img/content_glow.png) top center no-repeat; 
+}
+
+.hero-unit .buttons {
+   margin-top: 3em;
+}
+
+.hero-unit .buttons a {
+   text-decoration: none !important;
+}
+
+.hero-unit .buttons .btn {
+   border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px;
+   font-size: 1.1em;
+   font-weight: lighter;
+   height: 70px;
+   width: 30%;
+}
+
+.hero-unit .buttons .btn i {
+   margin-right: 0.7em;
+}
+
+.hero-unit .buttons > a + a {
+   margin-left: 1em;
+}
+
+.hero-unit .btn.download {
+   text-shadow: #111 -0.1em -0.15em 0.1em;
+   background: -moz-linear-gradient( center top, #333 50%, #111 50% ); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333', endColorstr='#111'); background: -webkit-gradient( linear, left top, left bottom, color-stop(0.5, #333), color-stop(0.5, #111) );
+}
+
+.hero-unit .btn.github {
+   text-shadow: #41046f -0.1em -0.15em 0.1em;
+   background: -moz-linear-gradient( center top, #6c399f 50%, #41046f 50% ); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6c399f', endColorstr='#41046f'); background: -webkit-gradient( linear, left top, left bottom, color-stop(0.5, #6c399f), color-stop(0.5, #41046f) );
+}
+
+.hero-unit .btn.nuget {
+   font-size: 0.9em;
+   font-weight: normal;
+   background: -moz-linear-gradient( center top, #fff 50%, #e6e6e6 50% ); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#e6e6e6'); background: -webkit-gradient( linear, left top, left bottom, color-stop(0.5, #fff), color-stop(0.5, #e6e6e6) );
+}
+
+.hero-unit .version-info {
+   margin-top: 2em;
+   font-size: 0.7em;
+}
+
+
+/* Social well */
+
+.social.well {
+   text-align: center;
+}
+
+.social.well .btn-mini + .btn-mini {
+   margin-left: 2em;
+}
+
+.social.well .icon-large {
+   margin-right: 0.2em;
+}
+
+
+/* License well */
+
+#license.well {
+   margin-top: -10px;
+}
+
+
+
+.icon-large {
+   font-size: 1.2em;
+}
+
