@@ -17,8 +17,7 @@
     <tags>net .net c# desk.com</tags>
   </metadata>
   <files>
-	<file src="..\Resources\README.txt" target="" />
-	<file src="..\Resources\Release-notes.txt" target="" />
-	<file src="bin\Release\Desk.dll" target="lib\net40" />
+	  <file src="..\Resources\README.txt" target="" />
+	  <file src="..\Resources\Release-notes.txt" target="" />
   </files>
 </package>

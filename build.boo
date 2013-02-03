@@ -71,8 +71,8 @@ target copy:
 target publish_nuget:
    File.Copy("README.md", "Resources\\README.txt", true)
    File.Copy("Release-notes.md", "Resources\\Release-notes.txt", true)
-   exec("nuget" , "pack ${project_name}\\${project_name}.csproj -prop configuration=release")
-   exec("nuget push ${project_name}.${build_version}.nupkg")
+   exec("Resources\\nuget" , "pack ${project_name}\\${project_name}.csproj -prop configuration=release")
+   exec("Resources\\nuget push ${project_name}.${build_version}.nupkg")
    exec("del *.nupkg")
    exec("del Resources\\README.txt")
    exec("del Resources\\Release-notes.txt")
