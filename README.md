@@ -25,7 +25,7 @@ You can find more information about the SDK at the following places:
 	Project site:	http://github.com/danielsaidi/desk-csharp-sdk
 	Downloads:		http://github.com/danielsaidi/desk-csharp-sdk/tags
 	Issues:			http://github.com/danielsaidi/desk-csharp-sdk/issues
-	NuGet package:	http://nuget.org/packages/desk-csharp-sdk
+	NuGet package:	http://nuget.org/packages/desk
 
 Do not hesitate to contact me if you have any questions. To report an
 issue or a bug, use the issue page or send me an e-mail.
@@ -51,17 +51,17 @@ each service supports. Use the call method to call the API:
 
 	var response = api.Call("topics.json", Method.GET)
 	
-provides a strongly typed way of interacting with the desk.com API.
 If you do not want to care about service urls, request parameters and
+If you do not want to sremember service urls, request parameters and
 other API details, use the DeskApiMapper class. To create an instance,
 you must provide it with an already setup api instance.
 
 	var apiMapper = new DeskApiMapper(api);
 
-The DeskApiMapper class adds a strongly typed layer on top of the SDK.
-It has dedicated methods for each service (the ones it supports), and
-uses strongly typed request parameters, which makes it really easy to
-define which ones to send.
+The DeskApiMapper class adds a strongly typed layer on top of the API.
+It has methods for each service (the ones it supports) and a strongly
+typed set of request parameters, which makes it really easy to define
+what to send to the API when making a request.
 
 The DeskApiMapper is really convenient, but until all API methods are
 mapped, you will need the DeskApi class as well.

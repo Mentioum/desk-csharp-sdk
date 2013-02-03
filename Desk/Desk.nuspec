@@ -16,6 +16,10 @@
     <copyright>Copyright 2009-2013, Daniel Saidi</copyright>
     <tags>net .net c# desk.com</tags>
   </metadata>
+  <dependencies>
+    <dependency id="Newtonsoft.Json" version="4.5.11" />
+    <dependency id="RestSharp" version="104.1" />
+  </dependencies>
   <files>
 	  <file src="..\Resources\README.txt" target="" />
 	  <file src="..\Resources\Release-notes.txt" target="" />
