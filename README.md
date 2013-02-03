@@ -9,8 +9,8 @@ desk.com API.
 
 If you need an SDK that supports everything that the desk.com API has
 to offer, this is not for you (at least not yet). The SDK can be used
-for all GET services, but only has strongly-typed components for some
-of them. Also, none of the POST, PUT or DELETE services are supported.
+for all desk.com API services, but only has strongly-typed components
+for some of them.
 
 However, since the core logic is very general, extending the SDK with
 what you miss should be a breeze. Just have a look at the things that
@@ -25,33 +25,33 @@ You can find more information about the SDK at the following places:
 	Project site:	http://github.com/danielsaidi/desk-csharp-sdk
 	Downloads:		http://github.com/danielsaidi/desk-csharp-sdk/tags
 	Issues:			http://github.com/danielsaidi/desk-csharp-sdk/issues
-	NuGet package:	coming soon... (will be on http://nuget.org/packages/desk-csharp-sdk)
+	NuGet package:	http://nuget.org/packages/desk-csharp-sdk
 
 Do not hesitate to contact me if you have any questions. To report an
-issue or a bug, use the GitHub issue page or send me an e-mail.
-
-Contributions to the library are more than welcome. Just send me pull
-requests via GitHub or attach your code in an e-mail.
+issue or a bug, use the issue page or send me an e-mail.
 
 
 Getting started
 ---------------
 
-To get started using the Desk.com C# SDK, either grab the source code
-from the GitHub project page, grab a public release from the download
-section or add a reference to the library directly from Visual Studio,
-using NuGet (COMING SOON).
+To get started with SDK, either grab the source code from the project
+page, grab a public release from the download section or simply add a
+reference to the library directly from Visual Studio, using NuGet.
 
-Once you have a reference in place, you can create a DeskApi instance
+Once you have a reference in place, you can create a DeskApi instance,
 using the base url to your desk.com app's API, the key and the secret
-of your desk.com app, as well as a token and token secret.
+of your desk app, as well as an OAUTH token and token secret. As such:
 
 	var api = new DeskApi("url", "key", "secret", "token", "token secret");
 
 With a DeskApi instance in place, you can start calling the API. This
-approach is very flexible, but you will have to know the service urls
-as well as which parameters each service supports.
+approach is very flexible and supports all existing API services, but
+you will have to know the url to each service as well as which params
+each service supports. Use the call method to call the API:
 
+	var response = api.Call("topics.json", Method.GET)
+	
+provides a strongly typed way of interacting with the desk.com API.
 If you do not want to care about service urls, request parameters and
 other API details, use the DeskApiMapper class. To create an instance,
 you must provide it with an already setup api instance.
@@ -123,6 +123,13 @@ Macro resources
  - macros/actions 
  - macros/actions/show 
  - macros/actions/update 
+
+
+Contributions
+-------------
+
+Contributions to the library are more than welcome. Just send me pull
+requests via GitHub or attach your code in an e-mail.
 
 
 License
