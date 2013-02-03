@@ -5,10 +5,10 @@ $(document).ready(function() {
 	}
 
 	function updateGitHubInfo() {
-		var api_base = "https://api.github.com/repos/danielsaidi/nextra";
+		var api_base = "https://api.github.com/repos/danielsaidi/desk-csharp-sdk";
 		var api_tags = api_base + "/tags?callback=?";
 
-		updateVersionInfo("0.0.2");
+		updateVersionInfo("0.0.3.0");
 
 		/*$.get(api_tags, function(data) {
 			updateVersionInfo(data[0]["name"]);
