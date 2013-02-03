@@ -19,7 +19,7 @@ namespace Desk
 
         public IRestResponse GetTopics(GetTopicsParameters parameters)
         {
-            return Api.Get("topics.json" + parameters);
+            return Api.Call("topics.json" + parameters, Method.GET);
         }
 
         public GetTopicsResponse GetTopicsMapped(GetTopicsParameters parameters)
@@ -29,7 +29,7 @@ namespace Desk
 
         public IRestResponse VerifyConnection()
         {
-            return Api.Get("account/verify_credentials.json");
+            return Api.Call("account/verify_credentials.json", Method.GET);
         }
     }
 }

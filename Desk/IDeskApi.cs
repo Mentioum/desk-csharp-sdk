@@ -4,6 +4,6 @@ namespace Desk
 {
     public interface IDeskApi
     {
-        IRestResponse Get(string resource);
+        IRestResponse Call(string resource, Method method);
     }
 }

@@ -64,6 +64,7 @@
     <Compile Include="TestData\GetTopicsResponseTestData.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Desk.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

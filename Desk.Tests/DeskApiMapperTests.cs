@@ -11,16 +11,16 @@ namespace Desk.Tests
     {
         private IDeskApiMapper mapper;
         private IDeskApi connection;
-        private IRestResponse response;
+        private IRestResponse getResponse;
 
 
         [SetUp]
         public void Setup()
         {
-            response = Substitute.For<IRestResponse>();
+            getResponse = Substitute.For<IRestResponse>();
             
             connection = Substitute.For<IDeskApi>();
-            connection.Get(Arg.Any<string>()).Returns(response);
+            connection.Call(Arg.Any<string>(), Method.GET).Returns(getResponse);
 
             mapper = new DeskApiMapper(connection);
         }
@@ -31,7 +31,7 @@ namespace Desk.Tests
         {
             mapper.GetTopics(GetTopicsParameters.None);
 
-            connection.Received().Get("topics.json");
+            connection.Received().Call("topics.json", Method.GET);
         }
 
         [Test]
@@ -41,7 +41,7 @@ namespace Desk.Tests
         {
             mapper.GetTopics(new GetTopicsParameters { Count = count, Page = page });
 
-            connection.Received().Get("topics.json?count=" + count + "&page=" + page);
+            connection.Received().Call("topics.json?count=" + count + "&page=" + page, Method.GET);
         }
 
         [Test]
@@ -49,7 +49,7 @@ namespace Desk.Tests
         {
             var result = mapper.GetTopics(GetTopicsParameters.None);
 
-            Assert.That(result, Is.EqualTo(response));
+            Assert.That(result, Is.EqualTo(getResponse));
         }
 
         [Test]
@@ -57,7 +57,7 @@ namespace Desk.Tests
         {
             mapper.GetTopicsMapped(GetTopicsParameters.None);
 
-            connection.Received().Get("topics.json");
+            connection.Received().Call("topics.json", Method.GET);
         }
 
         [Test]
@@ -67,7 +67,7 @@ namespace Desk.Tests
         {
             mapper.GetTopicsMapped(new GetTopicsParameters { Count = count, Page = page });
 
-            connection.Received().Get("topics.json?count=" + count + "&page=" + page);
+            connection.Received().Call("topics.json?count=" + count + "&page=" + page, Method.GET);
         }
 
         [Test]
@@ -83,7 +83,7 @@ namespace Desk.Tests
         {
             mapper.VerifyConnection();
 
-            connection.Received().Get("account/verify_credentials.json");
+            connection.Received().Call("account/verify_credentials.json", Method.GET);
         }
 
         [Test]
@@ -91,7 +91,7 @@ namespace Desk.Tests
         {
             var result = mapper.VerifyConnection();
 
-            Assert.That(result, Is.EqualTo(response));
+            Assert.That(result, Is.EqualTo(getResponse));
         }
     }
 }

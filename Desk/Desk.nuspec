@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <iconUrl>http://danielsaidi.github.com/nextra/static/img/icon_uniform.png</iconUrl>
+    <projectUrl>https://github.com/danielsaidi/desk-csharp-sdk</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
+    <summary>The desk.com C# SDK is a library that helps you integrate with the desk.com API.</summary>
+    <description>This package contains both general, lower level components that communicates with the API through basic rest requests and responses, as well as higher, object oriented level of mappers and entities.</description>
+    <releaseNotes>See http://github.com/danielsaidi/desk-csharp-sdk/blob/master/Release-notes.md for the latest release notes.</releaseNotes>
+    <copyright>Copyright 2009-2013, Daniel Saidi</copyright>
+    <tags>net .net c# desk.com</tags>
+  </metadata>
+  <files>
+	<file src="..\Resources\README.txt" target="" />
+	<file src="..\Resources\Release-notes.txt" target="" />
+	<file src="bin\Release\Desk.dll" target="lib\net40" />
+  </files>
+</package>

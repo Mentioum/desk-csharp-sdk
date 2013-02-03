@@ -8,6 +8,7 @@ namespace Desk
         public DeskApi(string apiUrlBase, string apiKey, string apiSecret, string apiToken, string apiTokenSecret)
         {
             ApiUrlBase = apiUrlBase;
+
             ApiKey = apiKey;
             ApiSecret = apiSecret;
             ApiToken = apiToken;
@@ -23,7 +24,16 @@ namespace Desk
 
         protected string ApiTokenSecret { get; private set; }
 
-        protected string ApiUrlBase { get; private set; }
+        protected string ApiUrlBase { get; set; }
+
+
+        public IRestResponse Call(string resource, Method method)
+        {
+            var client = GetClient();
+            var request = GetRequest(method, resource);
+
+            return client.Execute(request);
+        }
 
 
         private RestClient GetClient()
@@ -35,15 +45,14 @@ namespace Desk
             return client;
         }
 
-
-        public IRestResponse Get(string resource)
+        private RestRequest GetRequest(Method method, string resource)
         {
             var request = new RestRequest();
-            request.Method = Method.GET;
+            request.Method = method;
             request.Resource = resource;
             request.RequestFormat = DataFormat.Json;
 
-            return GetClient().Execute(request);
+            return request;
         }
     }
 }
