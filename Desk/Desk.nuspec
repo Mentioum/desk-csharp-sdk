@@ -15,11 +15,12 @@
     <releaseNotes>See http://github.com/danielsaidi/desk-csharp-sdk/blob/master/Release-notes.md for the latest release notes.</releaseNotes>
     <copyright>Copyright 2009-2013, Daniel Saidi</copyright>
     <tags>net .net c# desk.com</tags>
+
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="4.5.11" />
+      <dependency id="RestSharp" version="104.1" />
+    </dependencies>
   </metadata>
-  <dependencies>
-    <dependency id="Newtonsoft.Json" version="4.5.11" />
-    <dependency id="RestSharp" version="104.1" />
-  </dependencies>
   <files>
 	  <file src="..\Resources\README.txt" target="" />
 	  <file src="..\Resources\Release-notes.txt" target="" />
