@@ -6,7 +6,7 @@
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
-    <iconUrl>http://danielsaidi.github.com/nextra/static/img/icon_uniform.png</iconUrl>
+    <iconUrl>http://danielsaidi.github.com/desk-csharp-sdk/static/img/icon_uniform.png</iconUrl>
     <projectUrl>https://github.com/danielsaidi/desk-csharp-sdk</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
