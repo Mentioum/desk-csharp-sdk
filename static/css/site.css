@@ -34,7 +34,7 @@ footer i { margin-right: 1em; }
 }
 
 
-.hero-unit {
+.jumbotron {
    background: url(../img/bg-purple.png) #660bab;
    border-radius:0px; -moz-border-radius:0px; -webkit-border-radius:0px;
    color: white;
@@ -44,44 +44,44 @@ footer i { margin-right: 1em; }
    text-shadow: rgba(0, 0, 0, 0.8) 1px 2px 2px;
 }
 
-.hero-unit a {
+.jumbotron a {
    color: white;
    text-decoration: underline;
 }
 
-.hero-unit h1 {
+.jumbotron h1 {
    font-size: 6em;
    font-weight: normal;
 }
 
-.hero-unit h1 img {
+.jumbotron h1 img {
    margin-right: 0.3em;
 }
 
-.hero-unit p {
+.jumbotron p {
    font-size: 2em;
    margin-top: 20px;
 }
 
-.hero-unit p + p {
+.jumbotron p + p {
    font-size: 1.1em;
    margin-top: 40px;
 }
 
-.hero-unit .container {
+.jumbotron .container {
    padding: 80px 0 40px 0;
    background: url(../img/content_glow.png) top center no-repeat; 
 }
 
-.hero-unit .buttons {
+.jumbotron .buttons {
    margin-top: 3em;
 }
 
-.hero-unit .buttons a {
+.jumbotron .buttons a {
    text-decoration: none !important;
 }
 
-.hero-unit .buttons .btn {
+.jumbotron .buttons .btn {
    border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px;
    font-size: 1.1em;
    font-weight: lighter;
@@ -89,31 +89,31 @@ footer i { margin-right: 1em; }
    width: 30%;
 }
 
-.hero-unit .buttons .btn i {
+.jumbotron .buttons .btn i {
    margin-right: 0.7em;
 }
 
-.hero-unit .buttons > a + a {
+.jumbotron .buttons > a + a {
    margin-left: 1em;
 }
 
-.hero-unit .btn.download {
+.jumbotron .btn.download {
    text-shadow: #111 -0.1em -0.15em 0.1em;
    background: -moz-linear-gradient( center top, #333 50%, #111 50% ); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333', endColorstr='#111'); background: -webkit-gradient( linear, left top, left bottom, color-stop(0.5, #333), color-stop(0.5, #111) );
 }
 
-.hero-unit .btn.github {
+.jumbotron .btn.github {
    text-shadow: #41046f -0.1em -0.15em 0.1em;
    background: -moz-linear-gradient( center top, #6c399f 50%, #41046f 50% ); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6c399f', endColorstr='#41046f'); background: -webkit-gradient( linear, left top, left bottom, color-stop(0.5, #6c399f), color-stop(0.5, #41046f) );
 }
 
-.hero-unit .btn.nuget {
+.jumbotron .btn.nuget {
    font-size: 0.9em;
    font-weight: normal;
    background: -moz-linear-gradient( center top, #fff 50%, #e6e6e6 50% ); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#e6e6e6'); background: -webkit-gradient( linear, left top, left bottom, color-stop(0.5, #fff), color-stop(0.5, #e6e6e6) );
 }
 
-.hero-unit .version-info {
+.jumbotron .version-info {
    margin-top: 2em;
    font-size: 0.7em;
 }
