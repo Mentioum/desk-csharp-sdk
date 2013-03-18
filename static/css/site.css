@@ -1,8 +1,6 @@
 
 body { }
 
-footer a:hover { color: #fff; }
-
 h1, h2, h3, h1 + p { font-family: 'Molengo', Georgia, Times, serif; }
 
 h2 { border-bottom: 1px solid #EEE; }
@@ -22,6 +20,7 @@ footer {
 }
 
 footer a { color: #fff; text-decoration:underline; }
+footer a:hover { color: #fff; }
 footer i { margin-right: 1em; }
 
 
@@ -44,6 +43,11 @@ footer i { margin-right: 1em; }
    text-shadow: rgba(0, 0, 0, 0.8) 1px 2px 2px;
 }
 
+.jumbotron .container {
+   padding: 80px 0 40px 0;
+   background: url(../img/content_glow.png) top center no-repeat; 
+}
+
 .jumbotron a {
    color: white;
    text-decoration: underline;
@@ -58,23 +62,13 @@ footer i { margin-right: 1em; }
    margin-right: 0.3em;
 }
 
-.jumbotron p {
+.jumbotron h1 + p {
    font-size: 2em;
    margin-top: 20px;
 }
 
-.jumbotron p + p {
-   font-size: 1.1em;
-   margin-top: 40px;
-}
-
-.jumbotron .container {
-   padding: 80px 0 40px 0;
-   background: url(../img/content_glow.png) top center no-repeat; 
-}
-
 .jumbotron .buttons {
-   margin-top: 3em;
+   margin: 4em 0 3em 0;
 }
 
 .jumbotron .buttons a {
@@ -115,7 +109,7 @@ footer i { margin-right: 1em; }
 
 .jumbotron .version-info {
    margin-top: 2em;
-   font-size: 0.7em;
+   font-size: 1em;
 }
 
 
